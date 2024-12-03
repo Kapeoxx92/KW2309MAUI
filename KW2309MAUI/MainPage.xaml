@@ -1,64 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KW2309MAUI.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25"
-            BackgroundColor="Beige">
-            <Label
-                Text="Gra w kości. Autor:00000000000"
-             BackgroundColor ="Brown"
-                TextColor="White"
-                FontSize="Title"
-                Padding="5"/>
-            <Button
-                Text="RZUĆ KOŚĆMI"
-                BackgroundColor="Chocolate"
-                HorizontalOptions="Center"
-                Clicked="diceRoll"/>
-            <FlexLayout
-                x:Name="flexContainer"
-                Direction="Row">
-                <Image
-                    x:Name="dice_0"
-                    FlexLayout.Basis="20%"
-                    Source="k6_0.png"/>
-                <Image
-                    x:Name="dice_1"
-                    FlexLayout.Basis="20%"
-                    Source="k6_0.png"/>
-                <Image
-                    x:Name="dice_2"
-                    FlexLayout.Basis="20%"
-                    Source="k6_0.png"/>
-                <Image
-                    x:Name="dice_3"
-                    FlexLayout.Basis="20%"
-                    Source="k6_0.png"/>
-                <Image
-                    x:Name="dice_4"
-                    FlexLayout.Basis="20%"
-                    Source="k6_0.png"/>
-            </FlexLayout>
-            <Label
-                x:Name="rollResult"
-                Text="Wynik tego losowania: 0"
-                HorizontalTextAlignment="Center"/>
-            <Label
-                x:Name="gameResult"
-                Text="Wynik gry: 0"
-                HorizontalTextAlignment="Center"/>
-            <Button
-                Text="RESETUJ WYNIK"
-                BackgroundColor="Chocolate"
-                HorizontalOptions="Center"
-                Clicked="resetGame"/>
-            
+    <Label
+        Text="Gra w kości. Autor: 00000000000"
+        BackgroundColor="Brown"
+        TextColor="White"
+        FontSize="Title"
+        Padding="5"/>
 
-        </VerticalStackLayout>
-    </ScrollView>
+    <StackLayout Padding="30">
+        <Label x:Name="RollResultLabel" Text="Wynik tego losowania: 0" FontSize="24" />
+        <Label x:Name="GameResultLabel" Text="Wynik gry: 0" FontSize="24" />
 
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Image x:Name="dice_0" Source="k6_0.png" WidthRequest="100" HeightRequest="100" />
+            <Image x:Name="dice_1" Source="k6_0.png" WidthRequest="100" HeightRequest="100" />
+            <Image x:Name="dice_2" Source="k6_0.png" WidthRequest="100" HeightRequest="100" />
+            <Image x:Name="dice_3" Source="k6_0.png" WidthRequest="100" HeightRequest="100" />
+            <Image x:Name="dice_4" Source="k6_0.png" WidthRequest="100" HeightRequest="100" />
+        </StackLayout>
+
+        <Button Text="Rzuć kośćmi" Clicked="DiceRoll" />
+        <Button Text="Reset gry" Clicked="ResetGame" />
+    </StackLayout>
 </ContentPage>
