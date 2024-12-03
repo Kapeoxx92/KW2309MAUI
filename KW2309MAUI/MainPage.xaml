@@ -23,6 +23,10 @@
                 x:Name="flexContainer"
                 Direction="Row">
                 <Image
+                    x:Name="dice_0"
+                    FlexLayout.Basis="20%"
+                    Source="k6_0.png"/>
+                <Image
                     x:Name="dice_1"
                     FlexLayout.Basis="20%"
                     Source="k6_0.png"/>
